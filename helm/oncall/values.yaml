@@ -161,6 +161,20 @@ oncall:
     # the key in the secret containing the api key secret
     apiKeySecretKey: ""
 
+ asterisk:
+    # User name and password
+    ariApikey: ""
+    # Asterisk Caller id
+    ariCallerId: ""
+    # Trunk Name
+    ariTrunkName: ""
+    # Asterisk Extention
+    ariExtention: ""
+    # Asterisk context
+    ariContext: ""
+    # ari url
+    ariEndpoint: ""
+
 # Whether to run django database migrations automatically
 migrate:
   enabled: true

@@ -60,6 +60,12 @@ class LiveSetting(models.Model):
         "GRAFANA_CLOUD_NOTIFICATIONS_ENABLED",
         "DANGEROUS_WEBHOOKS_ENABLED",
         "PHONE_PROVIDER",
+        "ASTERISK_ARI_ENDPOINT",
+        "ASTERISK_ARI_APIKEY",
+        "ASTERISK_ARI_CALLER_ID",
+        "ASTERISK_ARI_CONTEXT",
+        "ASTERISK_ARI_EXTENSION",
+        "ASTERISK_ARI_TRUNK_NAME",
     )
 
     DESCRIPTIONS = {
@@ -148,6 +154,15 @@ class LiveSetting(models.Model):
         "GRAFANA_CLOUD_NOTIFICATIONS_ENABLED": "Enable SMS/call notifications via Grafana Cloud OnCall",
         "DANGEROUS_WEBHOOKS_ENABLED": "Enable outgoing webhooks to private networks",
         "PHONE_PROVIDER": f"Phone provider name. Available options: {','.join(list(settings.PHONE_PROVIDERS.keys()))}",
+        "ASTERISK_ARI_ENDPOINT": (
+            "Asterisk Rest Interface Endpoint. "
+            "Eg. http://asterisk.local:8088/ari"
+        ),
+        "ASTERISK_ARI_APIKEY": "API Key to access ARI (Usually in the form of ari_username:ari_password). ",
+        "ASTERISK_ARI_CALLER_ID": "Caller ID used by Asterisk.",
+        "ASTERISK_ARI_CONTEXT": "Context for Asterisk.",
+        "ASTERISK_ARI_EXTENSION": "Extension used when send alert via Asterisk.",
+        "ASTERISK_ARI_TRUNK_NAME": "Trunk provider name to connect to.",
     }
 
     SECRET_SETTING_NAMES = (
@@ -163,6 +178,12 @@ class LiveSetting(models.Model):
         "SLACK_SIGNING_SECRET",
         "TELEGRAM_TOKEN",
         "GRAFANA_CLOUD_ONCALL_TOKEN",
+        "ASTERISK_ARI_ENDPOINT",
+        "ASTERISK_ARI_APIKEY",
+        "ASTERISK_ARI_CALLER_ID",
+        "ASTERISK_ARI_CONTEXT",
+        "ASTERISK_ARI_EXTENSION",
+        "ASTERISK_ARI_TRUNK_NAME",
     )
 
     def __str__(self):

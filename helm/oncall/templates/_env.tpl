@@ -180,6 +180,35 @@ MIRAGE_SECRET_KEY
 {{- end -}}
 {{- end -}}
 
+{{- define "snippet.oncall.asterisk.env" -}}
+{{- with .Values.oncall.asterisk -}}
+{{- if .ariApikey }}
+- name: ASTERISK_ARI_APIKEY
+  value: {{ .ariApikey | quote }}
+{{- end -}}
+{{- if .ariCallerId }}
+- name: ASTERISK_ARI_CALLER_ID
+  value: {{ .ariCallerId | quote }}
+{{- end -}}
+{{- if .ariContext }}
+- name: ASTERISK_ARI_CONTEXT
+  value: {{ .ariContext | quote }}
+{{- end -}}
+{{- if .ariEndpoint }}
+- name: ASTERISK_ARI_ENDPOINT
+  value: {{ .ariEndpoint | quote }}
+{{- end -}}
+{{- if .ariExtention }}
+- name: ASTERISK_ARI_EXTENSION
+  value: {{ .ariExtention | quote }}
+{{- end -}}
+{{- if .ariTrunkName }}
+- name: ASTERISK_ARI_TRUNK_NAME
+  value: {{ .ariTrunkName | quote }}
+{{- end -}}
+{{- end -}}
+{{- end -}}
+
 {{- define "snippet.celery.env" -}}
 {{- if .Values.celery.worker_queue }}
 - name: CELERY_WORKER_QUEUE

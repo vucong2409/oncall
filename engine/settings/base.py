@@ -719,3 +719,9 @@ PHONE_PROVIDERS = {
     # "simple": "apps.phone_notifications.simple_phone_provider.SimplePhoneProvider",
 }
 PHONE_PROVIDER = os.environ.get("PHONE_PROVIDER", default="twilio")
+ASTERISK_ARI_ENDPOINT = os.environ.get("ASTERISK_ARI_ENDPOINT", default="")
+ASTERISK_ARI_APIKEY = os.environ.get("ASTERISK_ARI_APIKEY", default="")
+ASTERISK_ARI_CALLER_ID = os.environ.get("ASTERISK_ARI_CALLER_ID", default="")
+ASTERISK_ARI_CONTEXT = os.environ.get("ASTERISK_ARI_CONTEXT", default="")
+ASTERISK_ARI_EXTENSION = os.environ.get("ASTERISK_ARI_EXTENSION", default="")
+ASTERISK_ARI_TRUNK_NAME = os.environ.get("ASTERISK_ARI_TRUNK_NAME", default="")
